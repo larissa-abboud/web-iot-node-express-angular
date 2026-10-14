@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html ng-app="angCustApp">
+      <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+        <script src="/ngCustomers.js"></script>
+        <meta charset="UTF-8">
+        <title>Customers</title>
+      </head>
+      <body>
+        <p><a href="/menu">Menu</a></p>
+        <h1>Customers</h1>
+        <div ng-controller="CustomersListController">
+
+          <p ng-show="message"><strong>{{ message }}</strong></p>
+
+          <table border="1">
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>City</th>
+              <th></th>
+            </tr>
+            <tr ng-repeat="customer in customers">
+              <td>{{ customer.custId }}</td>
+              <td>{{ customer.custName }}</td>
+              <td>{{ customer.locAddress }}</td>
+              <td>{{ customer.city }}</td>
+              <td><button ng-click="deleteCustomer(customer)">Delete</button></td>
+            </tr>
+          </table>
+
+          <h2>Add a customer</h2>
+          <form ng-submit="newCustomer()">
+            <label>Name <input type="text" size="20" ng-model="newName" required/></label>
+            <label>Location
+              <select ng-model="newLocId" required
+                      ng-options="loc.locId as (loc.locAddress + ', ' + loc.city) for loc in locations">
+                <option value="">-- choose --</option>
+              </select>
+            </label>
+            <input type="submit" value="Add" />
+          </form>
+
+          <h2>Raw model</h2>
+          {{ customers }}
+        </div>
+      </body>
+</html>

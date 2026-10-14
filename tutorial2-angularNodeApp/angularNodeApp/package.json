@@ -1,0 +1,17 @@
+{
+  "name": "angularnodeapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "angularNodeApp.js",
+  "scripts": {
+    "start": "node angularNodeApp.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.18.2",
+    "mongodb": "^3.7.4",
+    "mysql": "^2.18.1"
+  }
+}

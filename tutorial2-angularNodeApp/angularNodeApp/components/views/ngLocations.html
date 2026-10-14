@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html ng-app="angLocApp">
+      <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+        <script src="/ngLocations.js"></script>
+		<meta charset="UTF-8">
+      </head>
+      <body>
+        <p><a href="/menu">Menu</a></p>
+        <h1>Locations</h1>
+        <div ng-controller="LocationsListController">
+			
+		<table>		
+			<tr ng-repeat="location in locations">
+				<td>{{ location.locId }}</td>
+				<td>{{ location.locAddress }}</td>
+				<td>{{ location.city }}</td>
+			</tr>
+		
+		</table>
+		
+		
+		<h2>Add</h2>
+          <form ng-submit="newLocation()">
+		  <label>Address <input type="text" size="30" ng-model="newAddress"/> </label>
+		  <label>City <input type="text" size="15" ng-model="newCity"/> </label>
+		  
+		  <input type="submit"  value="Add" />
+		  </form>
+		  
+		<h2>Raw model</h2>  
+		{{ locations }}
+        </div>
+      </body>
+    </html>
+

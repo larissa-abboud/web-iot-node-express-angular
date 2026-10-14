@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result (POST)</h1>
+
+    <p>You entered: <%= numbers.join(', ') %></p>
+    <p>Minimum: <%= min %></p>
+    <p><strong>The maximum is: <%= max %></strong></p>
+
+    <h2>Numbers between <%= min %> and <%= max %></h2>
+    <table border="1">
+        <tr>
+            <% between.forEach(function(n) { %>
+                <td><%= n %></td>
+            <% }); %>
+        </tr>
+    </table>
+
+    <p><a href="/">Back to the forms</a></p>
+</body>
+</html>

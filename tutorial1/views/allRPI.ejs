@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>All RPI</title>
+</head>
+<body>
+    <h1>All RPI sensor data (MongoDB)</h1>
+
+    <% if (rpis.length === 0) { %>
+        <p>No data in the collection.</p>
+    <% } else { %>
+        <table border="1">
+            <tr>
+                <th>RPI id</th>
+                <th>Type</th>
+                <th>Value</th>
+                <th>Date</th>
+            </tr>
+            <% rpis.forEach(function(rpi) { %>
+                <tr>
+                    <td><a href="/getRPI/<%= rpi.id %>"><%= rpi.id %></a></td>
+                    <td><%= rpi.type %></td>
+                    <td><%= rpi.value %></td>
+                    <td><%= rpi.date %></td>
+                </tr>
+            <% }); %>
+        </table>
+    <% } %>
+
+    <p><a href="/addRPI">Add data</a> | <a href="/">Home</a></p>
+</body>
+</html>

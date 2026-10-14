@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html ng-app="angRPIApp">
+      <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+        <script src="/ngRPI.js"></script>
+        <meta charset="UTF-8">
+        <title>RPI sensors</title>
+      </head>
+      <body>
+        <p><a href="/menu">Menu</a></p>
+        <h1>RPI sensors (MongoDB)</h1>
+        <div ng-controller="RPIListController">
+
+          <table border="1">
+            <tr>
+              <th>RPI id</th>
+              <th>Type</th>
+              <th>Value</th>
+              <th>Date</th>
+            </tr>
+            <tr ng-repeat="rpi in rpis">
+              <td>{{ rpi.id }}</td>
+              <td>{{ rpi.type }}</td>
+              <td>{{ rpi.value }}</td>
+              <td>{{ rpi.date | date:'dd/MM/yyyy HH:mm' }}</td>
+            </tr>
+          </table>
+
+        </div>
+      </body>
+</html>

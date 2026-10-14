@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Add RPI data</title>
+</head>
+<body>
+    <h1>Add RPI sensor data</h1>
+
+    <form action="/addRPI" method="POST">
+        <label>RPI id:</label> <input type="text" name="id" required><br><br>
+        <label>Type:</label>
+        <select name="type">
+            <option value="temperature">temperature</option>
+            <option value="humidity">humidity</option>
+            <option value="light">light</option>
+        </select><br><br>
+        <label>Value:</label> <input type="number" step="any" name="value" required><br><br>
+        <button type="submit">Add</button>
+    </form>
+
+    <p><a href="/getAllRPI">See all data</a> | <a href="/">Home</a></p>
+</body>
+</html>
