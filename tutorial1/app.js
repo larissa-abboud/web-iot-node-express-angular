@@ -107,10 +107,10 @@ const MONGO_COLLECTION = 'RpiSensors';            // collection name
 const mysql = require('mysql');
 
 const sqlDb = mysql.createConnection({
-    host: 'etu-web2',
-    user: 'bgaudou',
-    password: 'bgaudou',
-    database: 'db_bgaudou'
+    host: '',
+    user: '',
+    password: '',
+    database: ''
 });
 
 sqlDb.connect((err) => {
