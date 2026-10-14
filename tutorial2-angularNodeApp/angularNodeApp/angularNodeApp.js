@@ -8,10 +8,10 @@ let port = 3012;                 // CHANGE: your port (3000-3020)
 let mysql = require('mysql');
 let db = mysql.createConnection(
  {
-  host: 'etu-web2',             // the app runs on etu-web2 itself ('etu-web2' also works)
-  user: 'bgaudou',                 // CHANGE: your login
-  password: 'bgaudou',          // CHANGE: your MariaDB password
-  database: 'db_bgaudou'           // CHANGE: db_<your login>
+  host: '',             // app
+  user: '',                 // CHANGE: your login
+  password: '',          // CHANGE: your MariaDB password
+  database: ''           // CHANGE: db_<your login>
  }
 );
 
