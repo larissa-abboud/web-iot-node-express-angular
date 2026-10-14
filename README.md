@@ -1,6 +1,6 @@
 # Web Programming for IoT – Node.js, Express, MariaDB, MongoDB & AngularJS
 
-Lab work for the *Web Programming for IoT* course (Université Toulouse Capitole).
+Lab work for the *Web Programming for IoT* course .
 Two small web applications built step by step: a Node.js/Express server with forms,
 EJS templates and two databases, then a parcel-tracking app with an AngularJS front end.
 
